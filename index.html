@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Zegar2.css">
+</head>
+<body>
+    <div class="clock">
+        <ul class="clock-numbers">
+            <li><div class="number n1">1</div></li>
+            <li><div class="number n2">2</div></li>
+            <li><div class="number n3">3</div></li>
+            <li><div class="number n4">4</div></li>
+            <li><div class="number n5">5</div></li>
+            <li><div class="number n6">6</div></li>
+            <li><div class="number n7">7</div></li>
+            <li><div class="number n8">8</div></li>
+            <li><div class="number n9">9</div></li>
+            <li><div class="number n10">10</div></li>
+            <li><div class="number n11">11</div></li>
+            <li><div class="number n12">12</div></li>
+        </ul>
+        <ul class="hour-marks">
+            <li><div class="mark m1"></div></li>
+            <li><div class="mark m2"></div></li>
+            <li><div class="mark m3"></div></li>
+            <li><div class="mark m4"></div></li>
+            <li><div class="mark m5"></div></li>
+            <li><div class="mark m6"></div></li>
+            <li><div class="mark m7"></div></li>
+            <li><div class="mark m8"></div></li>
+            <li><div class="mark m9"></div></li>
+            <li><div class="mark m10"></div></li>
+            <li><div class="mark m11"></div></li>
+            <li><div class="mark m12"></div></li>
+            <li><div class="mark m13"></div></li>
+            <li><div class="mark m14"></div></li>
+            <li><div class="mark m15"></div></li>
+            <li><div class="mark m16"></div></li>
+            <li><div class="mark m17"></div></li>
+            <li><div class="mark m18"></div></li>
+            <li><div class="mark m19"></div></li>
+            <li><div class="mark m20"></div></li>
+            <li><div class="mark m21"></div></li>
+            <li><div class="mark m22"></div></li>
+            <li><div class="mark m23"></div></li>
+            <li><div class="mark m24"></div></li>
+            <li><div class="mark m25"></div></li>
+            <li><div class="mark m26"></div></li>
+            <li><div class="mark m27"></div></li>
+            <li><div class="mark m28"></div></li>
+            <li><div class="mark m29"></div></li>
+            <li><div class="mark m30"></div></li>
+            <li><div class="mark m31"></div></li>
+            <li><div class="mark m32"></div></li>
+            <li><div class="mark m33"></div></li>
+            <li><div class="mark m34"></div></li>
+            <li><div class="mark m35"></div></li>
+            <li><div class="mark m36"></div></li>
+            <li><div class="mark m37"></div></li>
+            <li><div class="mark m38"></div></li>
+            <li><div class="mark m39"></div></li>
+            <li><div class="mark m40"></div></li>
+            <li><div class="mark m41"></div></li>
+            <li><div class="mark m42"></div></li>
+            <li><div class="mark m43"></div></li>
+            <li><div class="mark m44"></div></li>
+            <li><div class="mark m45"></div></li>
+            <li><div class="mark m46"></div></li>
+            <li><div class="mark m47"></div></li>
+            <li><div class="mark m48"></div></li>
+
+        </ul>
+            <div class="hand hr-hand" id="hour-hand" ></div>
+            <div class="hand min-hand" id="minute-hand" ></div>
+            <div class="hand sec-hand" id="second-hand" ></div>
+            <div class="kropka" ></div>
+    </div>
+
+    <script>
+        let d = new Date()
+        let seconds = 0;
+        let minutes = 0;
+        let hours = 0;
+
+        setInterval(function(){
+            d = new Date();
+            seconds = d.getSeconds();
+            minutes = d.getMinutes();
+            hours = d.getHours();
+
+            let secondHand = document.getElementById("second-hand");
+            secondHand.style.transform = "rotate(" + seconds * 6 +"deg)"
+
+            let minuteHand = document.getElementById("minute-hand");
+            minuteHand.style.transform = "rotate(" + minutes * 6 +"deg)"
+
+            let hourHand = document.getElementById("hour-hand");
+            hourHand.style.transform = "rotate(" + hours * 30 +"deg)"
+
+        },1000)
+    </script>
+</body>
+</html>
+
